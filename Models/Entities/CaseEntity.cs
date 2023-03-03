@@ -9,10 +9,13 @@ namespace CaseManagementSystem.Models.Entities
         public string Subject { get; set; } = string.Empty;
         // FK to Area table
         public int AreaId { get; set; }
+        public AreaEntity Area { get; set; } = null!;
         // FK to Staff table
         public int AgentId { get; set; }
+        public StaffEntity Agent { get; set; } = null!;
         // FK to Staff table
         public int PrincipalId { get; set; }
+        public StaffEntity
         // FK to Status table
         public int StatusId { get; set; }
         // Should potentially be a List of strings, where a new comment
