@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CaseManagementSystem.Models.Entities
 {
-    internal class StaffEntity
+    public class StaffEntity
     {
         public int Id { get; set; }
         public string FirstName { get; set; } = string.Empty;

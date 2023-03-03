@@ -2,7 +2,7 @@
 
 namespace CaseManagementSystem.Models.Entities
 {
-    internal class CaseEntity
+    public class CaseEntity
     {
         // Key
         public int Id { get; set; }
@@ -15,11 +15,12 @@ namespace CaseManagementSystem.Models.Entities
         public StaffEntity Agent { get; set; } = null!;
         // FK to Staff table
         public int PrincipalId { get; set; }
-        public StaffEntity
+        public StaffEntity Principal { get; set; } = null!;
         // FK to Status table
         public int StatusId { get; set; }
+        public StatusEntity Status { get; set; } = null!;
         // Should potentially be a List of strings, where a new comment
         // adds another item in the list?
-        public List<string> Comments { get; set; } = new List<string>();
+        public string Comments { get; set; } = string.Empty;
     }
 }
