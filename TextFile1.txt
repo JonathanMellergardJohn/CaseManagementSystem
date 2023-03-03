@@ -1,0 +1,29 @@
+﻿CASE MANAGEMENT SYSTEM
+
+ENTITIES
+
+Table Name - Case
+
+	Id [key]
+	Subject
+	CaseArea [FK - Areas] // IT, House keeping inside, House keeping outside, 
+	Agent [FK - Employees] // the person who raises the case
+	Principal [FK - Employees] // the person in charge of the case
+	Status [FK - Status]// not opened, open, closed
+	Comments 
+
+Table Name - Employee
+	Id [Key]
+	FirstName
+	LastName
+	Email
+	CurrentOpenCases [FK - OpenCases] // all currently open cases for which employee is principal
+
+Table Name - Areas
+	Id
+	Area
+
+Table Name - OpenCases 
+	[compound key]
+	EmployeeId [Fk - Employee]
+	CaseId [Fk - Case]
